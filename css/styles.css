@@ -155,9 +155,13 @@ body, html{
   border-left: 2000px solid transparent;
   border-right: 2000px solid transparent;
   border-bottom: 2000px solid #9b0000;
-  top: -800%;
+  top: -1100%;
   left: 200px;
-  transition: 2s
+  transition: 1s
+}
+
+.right:hover .triangle-rouge{
+    left: -220%;
 }
 
 .right{
@@ -173,8 +177,25 @@ body, html{
     z-index:1;
     visibility: hidden;
     opacity: 0;
-    transition:visibility 1s linear,opacity 1s linear;
+    transition:visibility 1.5s linear,opacity 1.5s linear;
     color: black;
+}
+
+.right:hover .text-right{
+    visibility: visible;
+    opacity:1;
+}
+
+.right .results-img{
+    z-index:1;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 1.5s linear,opacity 1.5s linear;
+}
+
+.right:hover .results-img{
+    visibility: visible;
+    opacity:1;
 }
 
 .left{
@@ -186,19 +207,47 @@ body, html{
     z-index:-1
 }
 
-.triangle-rouge:hover{
-    left: -265%;
-}
-
-.right:hover .text-right{
-    visibility: visible;
-    opacity:1;
-}
-
 #show{
     font-weight: 900;
     top:100px;
     font-size: 400%;
+}
+
+.performances-img{
+    margin-top: 3%;
+    width: 70%;
+}
+
+.performances-img-phone{
+    margin-top: 3%;
+    width: 90%;
+    display:none;
+}
+
+.results-img{
+    margin-top: 6%;
+    position: absolute;
+    right: 0;
+    width:110%;
+}
+
+.results-img-phone{
+    margin-top: 16%;
+    position: absolute;
+    margin-right: -3%;
+    right: 0;
+    width: 135%;
+    display: none;
+}
+
+@media (max-width: 1440px){
+    .triangle-rouge{
+      top: -800%;
+    }
+
+    .right:hover .triangle-rouge{
+        left: -240%;
+    }
 }
 
 @media (max-width: 1200px){
@@ -207,7 +256,23 @@ body, html{
     }
 
     .triangle-rouge{
-        top:-700%;
+      border-left: 1500px solid transparent;
+      border-right: 1500px solid transparent;
+      border-bottom: 1500px solid #9b0000;
+      top: -1000%;
+    }
+
+    .right:hover .triangle-rouge{
+        left: -170%;
+    }
+
+    .performances-img{
+        width:80%;
+    }
+
+    .results-img{
+        width: 100%;
+        margin-right: -1%;
     }
 }
 
@@ -224,12 +289,93 @@ body, html{
 
 @media (max-width: 620px){
     #show{
-        font-size: 125%;
-        letter-spacing: 10px;
+        font-size:175%;
+        letter-spacing:10px;
+        margin-top:10%;
+        margin-right:1%;
     }
 
     .triangle-rouge{
-        top:-2350%;
+        top:-1800%;
+    }
+
+    .right:hover .triangle-rouge{
+        left: -370%;
+    }
+
+    .performances-img{
+        display:none;
+    }
+
+    .performances-img-phone{
+        display:inline;
+    }
+
+    .results-img{
+        display:none;
+    }
+
+    .results-img-phone{
+        display:inline;
+        width:207%;
+    }
+
+    .right:hover .results-img-phone{
+        visibility: visible;
+        opacity:1;
+    }
+
+    .right .results-img-phone{
+        z-index:1;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 2s linear,opacity 2s linear;
+    }
+}
+
+@media (max-width: 420px){
+    #show{
+        font-size:175%;
+        letter-spacing:10px;
+        margin-top:10%;
+        margin-right:1%;
+    }
+
+    .triangle-rouge{
+        top:-1600%;
+    }
+
+    .right:hover .triangle-rouge{
+        left: -210%;
+    }
+
+    .performances-img{
+        display:none;
+    }
+
+    .performances-img-phone{
+        display:inline;
+    }
+
+    .results-img{
+        display:none;
+    }
+
+    .results-img-phone{
+        display:inline;
+        width:110%;
+    }
+
+    .right:hover .results-img-phone{
+        visibility: visible;
+        opacity:1;
+    }
+
+    .right .results-img-phone{
+        z-index:1;
+        visibility: hidden;
+        opacity: 0;
+        transition:visibility 2s linear,opacity 2s linear;
     }
 }
 
@@ -239,7 +385,7 @@ body, html{
     position: absolute;
     text-align: right;
     background-color: #9b0000;
-    top: 250%;
+    top: 235%;
     right: 0;
     width: 100%;
     height: 100%;
@@ -266,14 +412,14 @@ body, html{
 
 .email-button{
     margin-top: 3%;
-    margin-right: 7%;
+    margin-right: 8%;
 }
 
 .email-text{
     position: absolute;
     right: 0;
-    margin-top: 3%;
-    margin-right: 20%;
+    margin-top: 2.8%;
+    margin-right: 25.5%;
     width: 70%;
     height: 10%;
 }
@@ -283,14 +429,104 @@ body, html{
     height: 60%;
 }
 
+@media (max-width: 1440px){
+    #get-armed{
+        top:195%;
+    }
+}
+
+@media (max-width: 1120px){
+    #get-armed{
+        top:160%;
+    }
+
+    .email-text{
+        margin-right: 32%;
+    }
+}
+
+@media (max-width: 620px){
+    #get-armed{
+        top:237%;
+        height:80%;
+    }
+
+    .get-armed-title{
+        font-size:175%;
+        letter-spacing:10px;
+        margin-top:10%;
+        margin-right:1%;
+    }
+
+    .email-button{
+        margin-right: 9%;
+        margin-top: 9%;
+    }
+
+    .email-text{
+        position: relative;
+        left: -59%;
+        width: 150%;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 420px){
+    #get-armed{
+        top:175%;
+        height: 90%;
+    }
+
+    .get-armed-title{
+        font-size:175%;
+        letter-spacing:10px;
+        margin-top:10%;
+        margin-right:1%;
+    }
+
+    .email-button{
+        margin-right: 9%;
+        margin-top: 9%;
+    }
+
+    .email-text{
+        position: relative;
+        left: -59%;
+        width: 150%;
+        margin-top: 10%;
+    }
+}
+
 /*Footer*/
 
 #footer{
     position: absolute;
-    top: 350%;
+    top: 320%;
     letter-spacing: 5px;
-    text-align: left;
-    margin: 20%;
-    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    bottom:0;
+    text-align: center;
+    background-color: #9b0000
 }
 
+@media (max-width: 1440px){
+    #footer{
+        top:285%;
+    }
+}
+
+@media (max-width: 1120px){
+    #footer{
+        top:250%;
+    }
+}
+
+@media (max-width: 420px){
+    #footer{
+        top:250%;
+    }
+}
